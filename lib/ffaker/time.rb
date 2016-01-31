@@ -26,5 +26,11 @@ module FFaker
       end
       date.strftime "%Y-%m-%d %T %z"
     end
+
+    def time
+      hour = rand(0..23)
+      minute = rand(0..59)
+      "%02d:%02d" % [hour, minute]
+    end
   end
 end

@@ -16,4 +16,9 @@ class TestFakerTime < Test::Unit::TestCase
     month_regex = /\A(?:January|February|March|April|May|June|July|August|September|October|November|December)\z/
     assert_match month_regex, @tester.month
   end
+
+  def test_time
+    date_regex = /\d{2}:\d{2}/
+    assert_match date_regex, @tester.time
+  end
 end
